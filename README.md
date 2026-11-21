@@ -7,9 +7,10 @@ Sistema web full stack para la gestión diaria de un comercio minorista (**Ferre
 
 ## Integrantes
 
-- Integrante 1 *(completar nombre)*
-- Integrante 2 *(completar nombre)*
-- Integrante 3 *(completar nombre)*
+- Mariano Manca
+- Rojas Mauricio
+- Luis Montes
+- Gonzalo Carrizo
 
 ## Stack tecnológico
 
@@ -33,6 +34,16 @@ pnpm run dev
 La aplicación queda disponible en `http://localhost:3000`.
 
 ## Usuarios de prueba
+
+### En producción (Vercel)
+
+| Rol | Email | Contraseña |
+| --- | --- | --- |
+| Vendedor | `vendedor@ferreteria.test` | `vendedor123` |
+
+*(Los usuarios administradores de producción corresponden a los integrantes del equipo.)*
+
+### En instalación local (`pnpm run db:seed`)
 
 | Rol | Nombre | Email | Contraseña | Estado |
 | --- | --- | --- | --- | --- |
