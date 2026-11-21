@@ -2,6 +2,15 @@
 
 Sistema web full stack para la gestión diaria de un comercio minorista (**Ferretería del Centro S.R.L.**): facturación ágil desde el mostrador, control atómico de existencias con historial completo, cuentas corrientes de clientes con recibos numerados, gestión de usuarios por rol y tablero de indicadores.
 
+- **URL pública (Vercel):** https://sistema-ferreter-a.vercel.app/
+- **Base de datos en producción:** Turso (libSQL)
+
+## Integrantes
+
+- Integrante 1 *(completar nombre)*
+- Integrante 2 *(completar nombre)*
+- Integrante 3 *(completar nombre)*
+
 ## Stack tecnológico
 
 - **Framework y lenguaje:** Next.js 16 (App Router) + TypeScript
@@ -71,6 +80,10 @@ La aplicación se organiza en capas estrictas:
    ```
 3. Configurar las variables de entorno en Vercel (`DATABASE_URL`, `DATABASE_AUTH_TOKEN`, `SESSION_SECRET`) y desplegar.
 
-## Integrantes
+## Requerimientos cubiertos
 
-- Completar con los integrantes del equipo y la URL pública de Vercel al publicar.
+- **Ventas (`RF-V1` a `RF-V9`):** nueva venta en una sola pantalla con atajos de teclado (`F2`, `F4`, `F8`, `F9`), consumidor final o cliente registrado con alta rápida modal, control de stock en cliente y servidor, 3 formas de pago (`contado`, `tarjeta` solo últimos 4 dígitos, `cuenta_corriente` con límite de crédito), confirmación en transacción atómica, comprobante imprimible, listado con filtros/paginado y anulación solo por administrador.
+- **Productos y existencias (`RF-P1` a `RF-P7`):** catálogo paginado con alerta de bajo mínimo, alta/edición/baja lógica, ingresos y egresos manuales de stock con motivos validados, historial de movimientos con referencia a factura y gestión de categorías.
+- **Clientes y cuenta corriente (`RF-C1` a `RF-C7`):** búsqueda por nombre o documento (sin importar puntos ni guiones), alta/edición/baja lógica (bloqueada con saldo pendiente), ficha con últimas facturas, cuenta corriente cronológica con saldo acumulado, registro de pagos con recibo numerado e imprimible y listado de saldos.
+- **Usuarios y acceso (`RF-U1` a `RF-U5`):** sesión en cookie `httpOnly` firmada, revalidación contra base de datos en cada pedido, gestión de usuarios por administrador, restablecimiento de contraseñas y cambio de contraseña propia en `/perfil`.
+- **Tablero (`RF-T1` a `RF-T3`):** indicadores del día y del mes en hora de Argentina, deuda total, productos bajo mínimo, gráficos con Chart.js (ventas diarias últimos 30 días y mes por forma de pago) y top 5 más vendidos del mes.
