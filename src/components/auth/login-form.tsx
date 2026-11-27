@@ -61,7 +61,7 @@ export function LoginScreen() {
       </div>
 
       {/* Panel derecho con formulario */}
-      <div className="flex flex-col justify-center items-center bg-background px-6 py-12">
+      <div className="relative flex flex-col justify-center items-center bg-background px-6 py-12">
         <div className="w-full max-w-sm space-y-6">
           <div className="lg:hidden flex items-center gap-3 pb-2">
             <span className="flex size-9 items-center justify-center rounded-lg bg-[#5ec8bd] text-[#0f2228] font-bold">
@@ -146,7 +146,19 @@ export function LoginScreen() {
             </Button>
           </form>
         </div>
+
+        {/* Cuadro de integrantes */}
+        <div className="mt-8 w-full max-w-sm lg:mt-0 lg:w-auto lg:absolute lg:bottom-6 lg:right-6 rounded-lg border border-border/70 bg-muted/40 px-4 py-3 text-xs text-muted-foreground shadow-xs">
+          <p className="font-semibold text-foreground mb-1">Integrantes</p>
+          <ul className="space-y-0.5">
+            <li>Mariano Manca</li>
+            <li>Rojas Mauricio</li>
+            <li>Montes Luis</li>
+            <li>Carrizo Gonzalo</li>
+          </ul>
+        </div>
       </div>
+
     </div>
   );
 }
